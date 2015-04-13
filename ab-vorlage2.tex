@@ -1,0 +1,151 @@
+\documentclass[	paper=a4,
+				fontsize=10pt,
+				twoside,
+				headings=small]{scrartcl}
+\usepackage{scrpage2} 			% Definition von Kopf- und Fußzeile (KOMA)
+\usepackage[iso,ngerman]{isodate} % Datum in ISO-Notation (für die Auflagenkontrolle)
+\usepackage[left=3cm,right=1.2cm,top=1.2cm,bottom=3cm]{geometry} % Schuletatkompatibilität
+\usepackage[ngerman]{betababel} % Trennungsmuster
+\usepackage[utf8]{inputenc} 	% Eingabe von Umlauten ermöglichen
+\usepackage[T1]{fontenc} 		% Trennung von Wörtern mit Umlauten                                  
+
+\selectlanguage{ngerman} 
+ 
+\pagestyle{scrheadings}   
+\clearscrheadfoot
+\setkomafont{pagenumber}{\mdseries\upshape\sffamily}
+\cfoot[\pagemark]{\pagemark} 
+ 
+\setcounter{secnumdepth}{-2}  % Hier wird die Tiefe der Abschnittsnummerierung eingestellt
+
+\addtokomafont{caption}{\centering\footnotesize} % Formatierung der Bildunterschriften
+\setkomafont{captionlabel}{\footnotesize\sffamily} 
+\deffootnote{1em}{1em}{\thefootnotemark\ }
+\setlength{\footnotesep}{11pt} % Abstand zwischen zwei Fußnoten 
+   
+\linespread{1.05} % der Durchschuss ist größer als üblich
+
+\usepackage{booktabs,	% Schöne Tabellen
+			capt-of, 	% Bildunterschriften auch ohne Gleitobjekte
+			xcolor, 	% Farben
+			graphicx, 	% Bilder 
+			paralist, 	% Platzsparende Aufzählungen
+			fancybox, 	% Boxen definieren und verorten
+			microtype, 	% Microtypographie
+			multicol, 	% Mehrspaltensatz, der auch Unterbrechungen der Mehrspaltigkeit zulässt
+			lineno} 	% Zeilennummern
+			
+\modulolinenumbers[5] 	% Intervall der Zeilennummern 
+
+\usepackage[babel,english=british,german=guillemets]{csquotes} % Hübsche Anführungszeichen
+
+\usepackage{lmodern}  			% Schrift 
+%\usepackage[mdugm]{mathdesign}	% URW Garamond (ggf. auskommetieren) 
+
+\usepackage{hyperref}
+\hypersetup{bookmarks,
+  pdfcreator={LaTeX2e, KOMA-Script (scrartcl), hyperref},% nur für PDF
+  pdfauthor={Tobias Frischholz}}
+
+\addtolength\columnsep{20pt} % Zusätzlicher Abstand zwischen Spalten
+
+\usepackage{ellipsis} 	% Hübsche Auslassungszeichen
+
+
+\begin{document} 
+	
+\thispagestyle{empty}  	% Bei mehrseitigen Dokumenten auskommentieren
+
+\part*{Überschrift des Ganzen}
+
+\thisfancyput*(-1.5cm,-24.5cm){\rotatebox{90}{\color{gray}\footnotesize\sf{Frischholz – \today}}} % Auflagenkontrolle  
+
+\begin{abstract}\noindent \emph{Einleitende Worte...}\end{abstract}                
+
+\begin{multicols}{2} % Zweispaltigkeit ergibt kürzere Zeilen 
+	                 % und führt zu besserer Lesbarkeit%
+
+\begin{linenumbers}  % Dieser Bereich soll Zeilennummern haben 
+
+\noindent Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+
+%\vspace{.2in}      
+%
+%\noindent \centerline {%
+%\fbox{\includegraphics{stifter}}}%
+%{\footnotesize\captionof{figure}{Adalbert Stifter (1805–1868)}} % captionof wird benutzt, weil in multicols keine Gleitobjekte verwendet werden können.
+%
+%\vspace{.2in}  
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{linenumbers}
+\end{multicols}
+
+%\hfill\cite[5\,f.]{Stifter:1959} % Literaturangabe 
+%
+%\vfill   % Variabler Platz – Literaturverzeichnis wird an den unteren Rand gerückt
+%\bibliographystyle{alphadin}  % Bibliographiestil
+%\bibliography{literaturdatenbank}  % Pfad zur Literaturdatenbank
+
+\end{document}
+  
